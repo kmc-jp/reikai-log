@@ -8,9 +8,12 @@
   "scripts": {
     "build": "webpack",
     "build:production": "NODE_ENV=production webpack",
-    "eslint": "eslint --fix ./src/**/*.ts",
-    "prettier": "prettier --write 'src/**/*.ts'",
-    "lint:fix": "run-s eslint prettier",
+    "eslint": "eslint ./src/**/*.ts",
+    "eslint:fix": "eslint --fix ./src/**/*.ts",
+    "prettier": "prettier --check 'src/**/*.ts'",
+    "prettier:fix": "prettier --write 'src/**/*.ts'",
+    "lint": "run-s eslint prettier",
+    "lint:fix": "run-s eslint:fix prettier:fix",
     "prepare": "husky install"
   },
   "devDependencies": {
