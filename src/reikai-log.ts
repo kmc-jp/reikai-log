@@ -29,6 +29,7 @@ app.message(async ({ message, client, logger }) => {
     await client.chat.postMessage({
       channel: "C0321SKJM", // #active
       text: messageText,
+      username: "例会ログ",
     });
   } catch (e) {
     logger.error(e);
