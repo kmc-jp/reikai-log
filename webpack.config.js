@@ -5,7 +5,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   mode: "development",
   entry: {
-    main: "./src/main.ts",
+    "reikai-log": "./src/reikai-log.ts",
   },
   output: {
     filename: "[name].js",
