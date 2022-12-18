@@ -7,7 +7,7 @@
   "license": "apache-2.0",
   "scripts": {
     "build:esbuild": "node esbuild.js",
-    "typecheck": "tsc ./src/reikai-log.ts --noEmit",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit",
     "build": "run-p build:esbuild typecheck",
     "build:production": "NODE_ENV=production run-p build:esbuild typecheck",
     "eslint": "eslint ./src/**/*.ts",
