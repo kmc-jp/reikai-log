@@ -22,7 +22,7 @@
     "@slack/bolt": "^3.12.2",
     "@tsconfig/strictest": "^1.0.2",
     "@types/node": "^18.11.17",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
     "@typescript-eslint/parser": "^5.46.1",
     "dotenv": "^16.0.1",
     "esbuild": "^0.16.6",
