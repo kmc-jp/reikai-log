@@ -4,10 +4,26 @@ import { App } from "@slack/bolt";
 
 // ソケットモードを使う
 // ポートは33555を使うが、環境変数PORTで変更可能
+
+const slackAppToken = process.env["SLACK_APP_TOKEN"];
+if (slackAppToken === undefined) {
+  throw new Error("SLACK_APP_TOKEN is not set");
+}
+
+const slackBotToken = process.env["SLACK_BOT_TOKEN"];
+if (slackBotToken === undefined) {
+  throw new Error("SLACK_BOT_TOKEN is not set");
+}
+
+const slackSigningSecret = process.env["SLACK_SIGNING_SECRET"];
+if (slackSigningSecret === undefined) {
+  throw new Error("SLACK_SIGNING_SECRET is not set");
+}
+
 const app = new App({
-  token: process.env["SLACK_BOT_TOKEN"]!,
-  appToken: process.env["SLACK_APP_TOKEN"]!,
-  signingSecret: process.env["SLACK_SIGNING_SECRET"]!,
+  token: slackBotToken,
+  appToken: slackAppToken,
+  signingSecret: slackSigningSecret,
   socketMode: true,
   port: Number.parseInt(process.env["PORT"] ?? "") || 33555,
 });
