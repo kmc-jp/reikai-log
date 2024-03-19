@@ -22,7 +22,7 @@
   "devDependencies": {
     "@slack/bolt": "^3.17.1",
     "@tsconfig/strictest": "^2.0.3",
-    "@types/node": "^20.11.19",
+    "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.0.1",
     "@typescript-eslint/parser": "^7.0.1",
     "dotenv": "^16.4.4",
