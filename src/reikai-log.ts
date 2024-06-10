@@ -40,6 +40,7 @@ app.message(async ({ message, client, logger }) => {
   }
 
   const messageText = (message as any).text;
+  logger.info("Transferring...", messageText);
 
   try {
     await client.chat.postMessage({
