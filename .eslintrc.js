@@ -16,7 +16,7 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   root: true,
   rules: {
-    "no-console": "error",
+    // "no-console": "error",
     "@typescript-eslint/consistent-type-imports": ["error", { prefer: "type-imports" }],
     "import/order": [
       "error",
